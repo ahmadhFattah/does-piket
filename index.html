@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Piket Yuk!</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<h1>PIKET</h1>
+		</div>
+		<div class="content">
+			<table>
+				<tr class="head">
+					<td>senin</td>
+					<td>selasa</td>
+					<td>rabu</td>
+				</tr>
+				<tr>
+					<td id="senin"></td>
+					<td id="selasa"></td>
+					<td id="rabu"></td>
+				</tr>
+				<tr class="head">
+					<td>kamis</td>
+					<td>jumat</td>
+					<td>sabtu</td>
+				</tr>
+				<tr>
+					<td id="kamis"></td>
+					<td id="jumat"></td>
+					<td id="sabtu"></td>
+				</tr>
+			</table>
+			<hr>
+			<form class="form">
+				<input type="text" name="name" id="name" placeholder="name">
+				<select id="day">
+					<option value="senin">senin</option>
+					<option value="selasa">selasa</option>
+					<option value="rabu">rabu</option>
+					<option value="kamis">kamis</option>
+					<option value="jumat">jumat</option>
+					<option value="sabtu">sabtu</option>
+				</select>
+				<button id="submit" type="button">SUBMIT</button>
+			</form>
+		</div>
+		<div class="footer">
+			<p>copyright 2018 aceng</p>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		document.getElementById("submit").addEventListener("click", function(){
+			var name = document.getElementById("name").value;
+			var day = document.getElementById("day").value;
+
+			document.getElementById(day).innerHTML += name + "<br>";
+		})
+	</script>
+</body>
+</html>
